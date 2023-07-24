@@ -32,4 +32,9 @@ class Image extends Model
     {
         return asset('storage/'.$this->file);
     }
+
+    public function permalink()
+    {
+        return route('image.show', $this->slug);
+    }
 }
